@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="in.blogspot.weargenius.alberto.callInterception.CallDetails">
+    <item
+        android:id="@+id/refresh_calls"
+        android:icon="@drawable/sync_white"
+        android:orderInCategory="100"
+        android:scaleType="centerCrop"
+        android:title="Save"
+        app:showAsAction="always" />
+</menu>

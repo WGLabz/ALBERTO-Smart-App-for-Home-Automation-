@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oksbwn"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.camera" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <!-- This part is inside the application -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+ >
+        <activity
+            android:name=".main.mainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".allSettings.vlcSettings"
+            android:label="@string/title_activity_vlc_settings" >
+        </activity>
+        <activity
+            android:name=".allSettings.emailSettings"
+            android:label="@string/title_activity_email_settings" >
+        </activity>
+        <activity
+            android:name=".allSettings.twitterSettings"
+            android:label="@string/title_activity_twitter_settings" >
+        </activity>
+        <activity
+            android:name=".allSettings.facebookSettings"
+            android:label="@string/title_activity_facebook_settings" >
+        </activity>
+        <activity
+            android:name=".allSettings.linkedInSettings"
+            android:label="@string/title_activity_linked_in_settings" >
+        </activity>
+
+        <service
+            android:name=".location.getMyLocation"
+            android:label="@string/title_activity_svae_my_locations_to_database" >
+        </service>
+
+        <activity
+            android:name=".facebook.facebookRSSFeeds"
+            android:label="@string/title_activity_facebook_rssfeeds" >
+        </activity>
+        <activity
+            android:name=".applianceControl.controlAppliances"
+            android:label="@string/title_activity_control_appliances" >
+        </activity>
+        <activity
+            android:name=".notes.NoteInterface"
+            android:label="@string/title_activity_note_interface"
+            android:parentActivityName=".main.mainActivity" >
+        </activity>
+
+        <receiver android:name=".widget.albertoWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/alberto_widget_info" />
+        </receiver>
+        <receiver android:name=".notifications.serviceReceiver" ></receiver>
+        <activity
+            android:name=".dailyFoods.foodMenu"
+            android:label="@string/title_activity_food_menu" >
+        </activity>
+
+        <service
+            android:name=".notifications.notificationsFood"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".phoneCall.CallDetectService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name=".applianceControl.audioController"
+            android:label="@string/title_activity_audio_controller" >
+        </activity>
+
+        <service
+            android:name=".postNotificationsToPC.listenToNotifications"
+            android:enabled="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".processMessages.readInboxMessage"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".notes.showNotes"
+            android:label="@string/title_activity_show_notes" >
+        </activity>
+        <activity
+            android:name=".alaram_manager.change_alram_settings"
+            android:label="@string/title_activity_change_alram_settings" >
+        </activity>
+        <activity
+            android:name=".expenses.add_expenses"
+            android:label="@string/title_activity_add_expenses" >
+        </activity>
+        <activity
+            android:name=".expenses.camera"
+            android:label="@string/title_activity_camera" >
+        </activity>
+        <activity
+            android:name=".expenses.shopping_list"
+            android:label="@string/title_activity_shopping_list" >
+        </activity>
+
+        <service
+            android:name=".readContactsToPC.SyncContacts"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".xbmc_remote.remote_interface"
+            android:label="@string/title_activity_remote_interface" >
+        </activity>
+        <activity
+            android:name=".emails_gmail.gmail_inbox"
+            android:label="@string/title_activity_gmail_inbox" >
+        </activity>
+    </application>
+
+    <!--
+     To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
+     option is required to comply with the Google+ Sign-In developer policies
+    -->
+
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- To retrieve the account name (email) as part of sign-in: -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+</manifest>
