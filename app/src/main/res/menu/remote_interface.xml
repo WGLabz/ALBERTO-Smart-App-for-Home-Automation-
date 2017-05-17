@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.oksbwn.xbmc_remote.remote_interface" >
+    <item
+        android:id="@+id/previous"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/prev"
+        android:scaleType="centerCrop"
+        android:title="Save"/>
+    <item
+        android:id="@+id/play"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/play"
+        android:scaleType="centerCrop"
+        android:title="Save"/>
+    <item
+        android:id="@+id/next"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/nest"
+        android:scaleType="centerCrop"
+        android:title="Save"/>
+</menu>

@@ -1,0 +1,73 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:weightSum="1"
+        android:minWidth="80dp"
+        android:layout_marginLeft="15dp" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton"
+            android:minWidth="50dp"
+            android:layout_weight="0.11" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton2"
+            android:minWidth="50dp"
+            android:layout_weight="0.11" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton3"
+            android:minWidth="50dp"
+            android:layout_weight="0.11" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton4"
+            android:minWidth="50dp"
+            android:maxHeight="50dp"
+            android:layout_weight="0.11" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton6"
+            android:minWidth="50dp"
+            android:layout_weight="0.11" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="87dp"
+            android:id="@+id/imageButton7"
+            android:minWidth="50dp"
+            android:layout_weight="0.11" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="92dp"
+        android:weightSum="1"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="This is a Test Applicazkgkhgdkhfghksgdhfkgskdfgkhsgdkfgsdkjfgjksgdfkjgsdkfkdkdkdkdfjgtion"
+            android:id="@+id/widgetTexts"
+            android:textSize="10dp" />
+    </LinearLayout>
+</LinearLayout>

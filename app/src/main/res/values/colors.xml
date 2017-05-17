@@ -1,0 +1,10 @@
+<resources>
+    <color name="screen_background">#333</color>
+    <color name="display_background">#000</color>
+    <color name="list_item_title">#000000</color>
+    <color name="list_background">#ffffff</color>
+    <color name="list_background_pressed">#ff0000</color>
+    <color name="list_divider">#000000</color>
+    <color name="counter_text_bg">#000000</color>
+    <color name="counter_text_color">#ffbbcc</color>
+</resources>

@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.oksbwn.alaram_manager.change_alram_settings" >
+
+    <item
+        android:id="@+id/saveCost"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/save"
+        android:scaleType="centerCrop"
+        android:title="Save"/>
+    <item
+        android:id="@+id/alramStatusSwitch"
+        android:title=""
+        android:showAsAction="always"
+        android:actionLayout="@layout/alram_action_switch"
+     />
+
+</menu>

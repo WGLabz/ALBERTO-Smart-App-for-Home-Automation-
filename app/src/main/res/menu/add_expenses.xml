@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.oksbwn.expenses.add_expenses" >
+
+    <item
+        android:id="@+id/saveCost"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/save"
+        android:scaleType="centerCrop"
+        android:title="Save"/>
+    <item
+        android:id="@+id/addPurchase"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/shop"
+        android:scaleType="centerCrop"
+        android:title="Add Purchase"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/bar_settings"
+        android:scaleType="centerCrop"
+        android:title="Settings">
+    </item>
+
+</menu>

@@ -1,0 +1,280 @@
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:scaleType="centerCrop"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:alpha=".5"
+            android:background="#8707b5ff"
+            android:weightSum="1">
+
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"
+                android:id="@+id/sunCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Sunday"
+                android:id="@+id/sun"
+                android:layout_weight="0.14"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textViewdf2"
+                android:layout_weight="0.15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/sunText"
+                android:layout_weight="0.63"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="#ffffffff"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"
+                android:id="@+id/monCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Monday"
+                android:id="@+id/Monday"
+                android:layout_weight="0.14"
+                android:textStyle="bold"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textViewfgfg2"
+                android:layout_weight="0.15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/monText"
+                android:layout_weight="0.63"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:alpha=".5"
+            android:background="#8707b5ff"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"
+                android:id="@+id/tueCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Tuesday"
+                android:id="@+id/textView11"
+                android:layout_weight="0.14"
+                android:textStyle="bold"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textsdsdView2"
+                android:layout_weight="0.15" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tueText"
+                android:layout_weight="0.63"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="#ffffffff"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:id="@+id/linearLayout">
+
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"
+                android:id="@+id/wedCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Wed. day"
+                android:id="@+id/textView121"
+                android:layout_weight="0.14"
+                android:textStyle="bold"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textVdfdfiew2"
+                android:layout_weight="0.15" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/wedText"
+                android:layout_weight="0.63"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:alpha=".5"
+            android:background="#8707b5ff"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:id="@+id/linearLayout2" >
+
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"
+                android:id="@+id/thuCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Thursday"
+                android:id="@+id/textView"
+                android:layout_weight="0.14"
+                android:textStyle="bold"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textViewdfdf2"
+                android:layout_weight="0.15" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/thuText"
+                android:layout_weight="0.63"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="#ffffffff"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:id="@+id/linearLayout3" >
+
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"
+                android:id="@+id/friCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Friday"
+                android:id="@+id/textView12"
+                android:layout_weight="0.14"
+                android:textStyle="bold"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView2"
+                android:layout_weight="0.22" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/friText"
+                android:layout_weight="0.60"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:alpha=".5"
+            android:background="#8707b5ff"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:id="@+id/linearLayout4" >
+
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04"
+                android:id="@+id/satCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Saturday"
+                android:id="@+id/textView212"
+                android:layout_weight="0.14"
+                android:textStyle="bold"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView2dfd"
+                android:layout_weight="0.15" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/satText"
+                android:layout_weight="0.63"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
