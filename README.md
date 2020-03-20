@@ -1,1 +1,0 @@
-## ALBERTO - Android Smart Assistant

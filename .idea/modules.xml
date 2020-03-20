@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ALBERTO-Smart-App-for-Home-Automation-.iml" filepath="$PROJECT_DIR$/ALBERTO-Smart-App-for-Home-Automation-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ALBERTO.iml" filepath="$PROJECT_DIR$/ALBERTO.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
