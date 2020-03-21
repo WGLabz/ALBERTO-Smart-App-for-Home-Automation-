@@ -22,7 +22,7 @@ jobs:
     - name: navigate to code folder
       run: cd Code
     - name: Build debug APK
-      run:  ./gradlew build --stacktrace
+      run:  Code/gradlew build --stacktrace
     - name: Upload APK
       uses: actions/upload-artifact@v1
       with:
