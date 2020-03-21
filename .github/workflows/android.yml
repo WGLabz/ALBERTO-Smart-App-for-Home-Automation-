@@ -1,15 +1,17 @@
-name: Android CI
+name: Android Master CI
 
 on:
   push:
-    branches: [ master ]
+    branches:  
+      - 'master' 
   pull_request:
-    branches: [ master ]
+    branches:
+      - 'master'
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    name: Generate apk.
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v2
@@ -17,5 +19,10 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Build debug APK
+      run: bash ./gradlew assembleDebug --stacktrace
+    - name: Upload APK
+      uses: actions/upload-artifact@v1
+      with:
+        name: app
+        path: app/build/outputs/apk/debug/app-debug.apk
