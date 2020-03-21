@@ -1,4 +1,4 @@
-package in.wglabz.alberto.main;
+package in.wglabz.alberto.main.activities;
 import android.Manifest;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -34,7 +34,6 @@ import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import in.wglabz.alberto.R;
-import in.wglabz.alberto.main.activities.SettingsActivity;
 import in.wglabz.alberto.main.helpers.MqttHelper;
 import in.wglabz.alberto.main.services.CallDetectService;
 

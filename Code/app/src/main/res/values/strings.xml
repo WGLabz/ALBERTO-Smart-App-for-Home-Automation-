@@ -29,4 +29,15 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Setting Preferences Constants    -->
+    <string name="mqtt_title">MQTT Details</string>
+    <string name="server_address_title">Server Address</string>
+    <string name="protcol_title">Protocol</string>
+    <string name="port_title">Port</string>
+    <string name="mqtt_topic_title">MQTT Topic</string>
+    <string name="default_mqtt_topic">alberto</string>
+    <string name="mqtt_port_default_value">1883</string>
+    <string name="mqtt_username_title">Username</string>
+    <string name="mqtt_password_title">Password</string>
 </resources>

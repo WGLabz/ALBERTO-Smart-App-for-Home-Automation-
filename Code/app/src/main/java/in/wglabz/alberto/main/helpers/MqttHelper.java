@@ -1,8 +1,11 @@
 package in.wglabz.alberto.main.helpers;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.preference.PreferenceManager;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
@@ -14,16 +17,20 @@ import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 
+import java.util.Date;
+
 public class MqttHelper {
     public static MqttAndroidClient mqttAndroidClient;
-    final String serverUri = "tcp://192.168.0.7:1883";
-    final String clientId = "iot_demo_app";
-    final String subscriptionTopic = "sensor/+";
-    final String username = "openhabian";
-    final String password = "om";
+    final String clientId = "alberto_smart_android_app"+new Date();
+    String username = "";
+    String password = "";
 
     public MqttHelper(Context context){
-        mqttAndroidClient = new MqttAndroidClient(context, serverUri, clientId);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        username=prefs.getString("mqtt_username","no_user");
+        password=prefs.getString("mqtt_password","no_pasword");
+
+        mqttAndroidClient = new MqttAndroidClient(context,prefs.getString("protocol","tcp")+"://"+prefs.getString("server_address","")+":"+prefs.getString("port","1883"), clientId);
         mqttAndroidClient.setCallback(new MqttCallbackExtended() {
             @Override
             public void connectComplete(boolean b, String s) {
@@ -73,7 +80,7 @@ public class MqttHelper {
                 }
                 @Override
                 public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    Log.w("Mqtt", "Failed to connect to: " + serverUri + exception.toString());
+                    Log.w("Mqtt", "Failed to connect to: " +  exception.toString());
                 }
             });
         } catch (MqttException ex){
@@ -116,22 +123,22 @@ public class MqttHelper {
         }
     }
     private void subscribeToTopic() {
-        try {
-            mqttAndroidClient.subscribe(subscriptionTopic, 0, null, new IMqttActionListener() {
-                @Override
-                public void onSuccess(IMqttToken asyncActionToken) {
-                    Log.w("Mqtt","Subscribed!");
-                }
-
-                @Override
-                public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-                    Log.w("Mqtt", "Subscribed fail!");
-                }
-            });
-
-        } catch (MqttException ex) {
-            System.err.println("Exceptionst subscribing");
-            ex.printStackTrace();
-        }
+//        try {
+//            mqttAndroidClient.subscribe(subscriptionTopic, 0, null, new IMqttActionListener() {
+//                @Override
+//                public void onSuccess(IMqttToken asyncActionToken) {
+//                    Log.w("Mqtt","Subscribed!");
+//                }
+//
+//                @Override
+//                public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
+//                    Log.w("Mqtt", "Subscribed fail!");
+//                }
+//            });
+//
+//        } catch (MqttException ex) {
+//            System.err.println("Exceptionst subscribing");
+//            ex.printStackTrace();
+//        }
     }
 }

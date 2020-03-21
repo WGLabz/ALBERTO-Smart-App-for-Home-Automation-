@@ -1,20 +1,37 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
+    <PreferenceCategory app:title="@string/mqtt_title">
+        <ListPreference
+            app:defaultValue="tcp"
+            app:entries="@array/protcol_entries"
+            app:entryValues="@array/protcol_entries"
+            app:key="protocol"
+            app:title="@string/protcol_title"
+            app:useSimpleSummaryProvider="true" />
 
         <EditTextPreference
-            app:key="signature"
-            app:title="@string/signature_title"
+            app:key="server_address"
+            app:title="@string/server_address_title"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="port"
+            app:title="@string/port_title"
+            app:defaultValue="@string/mqtt_port_default_value"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="mqtt_topic"
+            app:title="@string/mqtt_topic_title"
+            app:defaultValue="@string/default_mqtt_topic"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="mqtt_username"
+            app:title="@string/mqtt_username_title"
             app:useSimpleSummaryProvider="true" />
 
-        <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/reply_title"
+        <EditTextPreference
+            app:key="mqtt_password"
+            app:title="@string/mqtt_password_title"
             app:useSimpleSummaryProvider="true" />
-
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/sync_header">
